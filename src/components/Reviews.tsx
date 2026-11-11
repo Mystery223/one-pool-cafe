@@ -172,11 +172,16 @@ function useReviewsData() {
 
   useEffect(() => {
     const fetchReviews = async () => {
-      const { data, error } = await supabase.from('reviews').select('*').eq('is_approved', true).order('created_at', { ascending: false });
-      if (!error && data && data.length > 0) {
-        setReviews(mapLocalizedReviews(data as Review[]));
+      try {
+        const { data, error } = await supabase.from('reviews').select('*').eq('is_approved', true).order('created_at', { ascending: false });
+        if (!error && data && data.length > 0) {
+          setReviews(mapLocalizedReviews(data as Review[]));
+        }
+      } catch {
+        // Fallback to defaultReviews silently
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     };
     fetchReviews();
   }, []);
