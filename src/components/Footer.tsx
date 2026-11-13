@@ -29,10 +29,10 @@ function FooterBrand() {
   return (
     <div className="flex flex-col items-center gap-2 mb-6">
       <div className="w-12 h-12 rounded-full border border-gold-500/40 bg-void-900 overflow-hidden flex items-center justify-center shadow-sm">
-        <img src="/logo.jpeg" alt="Logo One Pool and Cafe" className="w-full h-full object-cover" />
+        <img src="/logo.jpeg" alt="Logo One Pool and Coffee" className="w-full h-full object-cover" />
       </div>
       <span className="font-display text-sm tracking-widest text-parchment-100 font-semibold">
-        ONE POOL & CAFE
+        ONE POOL & COFFEE
       </span>
       <p className="text-xs text-parchment-300">Billiard &amp; Coffee Experience</p>
     </div>
@@ -41,9 +41,9 @@ function FooterBrand() {
 
 function FooterSocials() {
   const socials = [
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram One Pool and Cafe' },
-    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook One Pool and Cafe' },
-    { icon: Twitter, href: 'https://x.com', label: 'X (Twitter) One Pool and Cafe' },
+    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram One Pool and Coffee' },
+    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook One Pool and Coffee' },
+    { icon: Twitter, href: 'https://x.com', label: 'X (Twitter) One Pool and Coffee' },
   ];
   return (
     <div className="flex items-center justify-center gap-3 mb-8">
@@ -71,7 +71,7 @@ export default function Footer() {
         <FooterBrand />
         <FooterSocials />
         <p className="text-xs text-parchment-300 tracking-wider">
-          &copy; {new Date().getFullYear()} One Pool and Cafe. Seluruh hak cipta dilindungi.
+          &copy; {new Date().getFullYear()} One Pool and Coffee. Seluruh hak cipta dilindungi.
         </p>
       </div>
     </footer>

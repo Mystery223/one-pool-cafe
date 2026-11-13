@@ -4,11 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-* { scroll-behavior: smooth; box-sizing: border-box; }
+* { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 5rem;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {

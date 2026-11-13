@@ -55,7 +55,7 @@ function ReviewsHeader() {
         Ulasan Pengunjung
       </h2>
       <p className="mt-3 text-parchment-200 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-        Pendapat jujur dari pengunjung tentang permainan billiard, rasa kopi, dan kenyamanan di One Pool and Cafe.
+        Pendapat jujur dari pengunjung tentang permainan billiard, rasa kopi, dan kenyamanan di One Pool and Coffee.
       </p>
     </div>
   );
@@ -70,7 +70,9 @@ function StarRating({ rating, setRating }: { rating: number; setRating?: (n: num
           type="button"
           disabled={!setRating}
           onClick={() => setRating?.(n)}
-          className={`p-1 ${setRating ? 'cursor-pointer hover:scale-110' : 'cursor-default'} transition-transform`}
+          className={`p-1.5 min-h-[40px] min-w-[40px] flex items-center justify-center ${
+            setRating ? 'cursor-pointer hover:scale-110' : 'cursor-default'
+          } transition-transform`}
           aria-label={`${n} bintang`}
         >
           <Star className={`w-4 h-4 ${n <= rating ? 'fill-gold-400 text-gold-400' : 'text-void-700'}`} />

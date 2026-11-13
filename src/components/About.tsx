@@ -22,7 +22,7 @@ const values = [
   {
     icon: Wifi,
     title: 'Ruang Nyaman & WiFi Cepat',
-    text: 'Suasana santai dengan koneksi WiFi cepat — cocok untuk bersantai atau nongkrong bareng.',
+    text: 'Suasana santai dengan koneksi WiFi cepat sangat cocok untuk bersantai atau nongkrong bareng.',
   },
 ];
 
@@ -49,8 +49,8 @@ function StoryContent() {
         Tempat Santai, Main Billiard &amp; Ngopi
       </h2>
       <p className="mt-5 text-parchment-200 text-sm sm:text-base leading-relaxed">
-        One Pool and Cafe hadir sebagai tempat nongkrong yang menyenangkan — perpaduan
-        meja billiard premium dengan pilihan kopi dan minuman terbaik. Kami menyediakan
+        One Pool and Coffee hadir sebagai tempat nongkrong yang menyenangkan dengan memadukan
+        meja billiard premium serta pilihan kopi dan minuman terbaik. Kami menyediakan
         suasana santai yang sempurna untuk bersantai bersama teman dan keluarga.
       </p>
       <ValueGrid />
@@ -64,15 +64,11 @@ function StoryImage() {
       <div className="relative overflow-hidden rounded-lg border border-gold-600/20 shadow-2xl shadow-black/60">
         <img
           src={baristaImg}
-          alt="Suasana One Pool and Cafe"
+          alt="Suasana One Pool and Coffee"
           className="w-full h-[320px] sm:h-[420px] lg:h-[500px] object-cover"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-void-950/80 via-transparent to-transparent" />
-        <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3.5 sm:p-4 bg-void-950/85 backdrop-blur-sm border border-gold-500/30 rounded">
-          <p className="text-xs text-gold-300 uppercase tracking-wider font-semibold">Ruang &amp; Rasa</p>
-          <p className="text-sm text-parchment-100 font-display mt-0.5">Suasana hangat yang dirancang untuk kenyamanan Anda.</p>
-        </div>
       </div>
     </div>
   );
@@ -88,9 +84,6 @@ function DividerQuote() {
     >
       <div className="absolute inset-0 bg-void-950/85 backdrop-blur-[2px]" />
       <div className="relative max-w-3xl mx-auto text-center px-6">
-        <p className="text-xs tracking-widest uppercase text-gold-400 font-semibold mb-2">
-          Billiard &amp; Kopi dalam Satu Tempat
-        </p>
         <blockquote className="font-display text-2xl sm:text-4xl text-parchment-100 font-bold leading-snug">
           "Satu tempat untuk semua momen santai terbaikmu."
         </blockquote>

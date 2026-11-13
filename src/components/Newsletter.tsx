@@ -31,7 +31,7 @@ function FormInputs({
     <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
       <div className="relative flex-1">
         <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-400/80" />
-        <input type="email" required placeholder="Masukkan email Anda" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-sm focus:border-gold-500" />
+        <input type="email" required placeholder="Masukkan email Anda" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-base sm:text-sm focus:border-gold-500" />
       </div>
       <button type="submit" disabled={status === 'loading'} className="px-6 py-3 bg-gold-500 text-void-950 text-xs tracking-wider uppercase font-semibold rounded hover:bg-gold-400 transition-colors flex items-center justify-center gap-2 whitespace-nowrap shadow-md">
         {status === 'loading' ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Berlangganan'}
@@ -93,7 +93,7 @@ export default function Newsletter() {
   return (
     <section className="relative py-20 sm:py-24 overflow-hidden border-t border-void-800/80">
       <div className="absolute inset-0">
-        <img src={bgImg} alt="Suasana One Pool and Cafe" className="w-full h-full object-cover opacity-20" />
+        <img src={bgImg} alt="Suasana One Pool and Coffee" className="w-full h-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-void-950/90" />
       </div>
       <div className="relative max-w-2xl mx-auto px-6 text-center">

@@ -10,7 +10,7 @@ function HeroBackground() {
     <div className="absolute inset-0">
       <img
         src={heroBg}
-        alt="Interior suasana One Pool and Cafe"
+        alt="Interior suasana One Pool and Coffee"
         className="w-full h-full object-cover opacity-35"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-void-950/95 via-void-950/80 to-void-950/40" />
@@ -45,7 +45,7 @@ function HeroContent() {
     <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-28 pb-20 sm:pt-32 sm:pb-24 w-full">
       <div className="max-w-2xl">
         <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl text-parchment-100 font-bold leading-[1.1] tracking-tight">
-          One Pool and Cafe
+          One Pool and Coffee
           <span className="block italic text-gold-300 font-normal mt-2 text-3xl sm:text-5xl lg:text-6xl">
             Billiard &amp; Kopi Terbaik
           </span>
@@ -66,15 +66,15 @@ function IntroStoryBand() {
       <div className="absolute inset-0">
         <img
           src={coffeeBeans}
-          alt="Suasana One Pool and Cafe"
+          alt="Suasana One Pool and Coffee"
           className="w-full h-full object-cover opacity-15"
         />
       </div>
       <div className="relative max-w-3xl mx-auto px-6 text-center">
         <p className="text-parchment-200 text-sm sm:text-base leading-relaxed font-light">
           Satu tempat untuk semua momen santai terbaikmu. Dari meja billiard berkualitas tinggi
-          hingga kopi spesial yang diseduh dengan penuh dedikasi — semuanya hadir di{' '}
-          <span className="text-gold-300 italic font-display font-medium">One Pool and Cafe</span>.
+          hingga kopi spesial yang diseduh dengan penuh dedikasi semuanya hadir di{' '}
+          <span className="text-gold-300 italic font-display font-medium">One Pool and Coffee</span>.
         </p>
       </div>
     </section>

@@ -33,13 +33,13 @@ function NavBrand() {
     <a
       href="#home"
       onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}
-      className="flex flex-col items-center group mx-auto md:mx-0"
+      className="flex flex-col items-center group md:static absolute left-1/2 -translate-x-1/2 pointer-events-auto"
     >
       <div className="w-11 h-11 rounded-full border border-gold-500/50 overflow-hidden flex items-center justify-center group-hover:border-gold-400 transition-colors bg-void-900/60 shadow-sm">
-        <img src="/logo.jpeg" alt="Logo One Pool and Cafe" className="w-full h-full object-cover" />
+        <img src="/logo.jpeg" alt="Logo One Pool and Coffee" className="w-full h-full object-cover" />
       </div>
       <span className="font-display text-sm text-parchment-100 tracking-widest mt-1.5 leading-none">
-        ONE POOL & CAFE
+        ONE POOL & COFFEE
       </span>
     </a>
   );
@@ -53,7 +53,7 @@ function MobileLinks({ onClose }: { onClose: () => void }) {
           <a
             href={link.href}
             onClick={(e) => { e.preventDefault(); scrollToSection(link.href); onClose(); }}
-            className="block px-3 py-3 text-sm tracking-wide text-parchment-200 hover:text-gold-300 transition-colors"
+            className="flex items-center min-h-[44px] px-3 py-2 text-sm tracking-wide text-parchment-200 hover:text-gold-300 transition-colors"
           >
             {link.label}
           </a>
@@ -110,13 +110,13 @@ function DesktopRight() {
 
 function DesktopNav({ onToggle, open }: { onToggle: () => void; open: boolean }) {
   return (
-    <div className="flex items-center justify-between h-20">
+    <div className="relative flex items-center justify-between h-20">
       <DesktopLinks start={0} end={3} />
       <NavBrand />
       <DesktopRight />
       <button
         onClick={onToggle}
-        className="md:hidden text-parchment-100 p-2.5 rounded hover:bg-void-900 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+        className="md:hidden ml-auto text-parchment-100 p-2.5 rounded hover:bg-void-900 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center z-10"
         aria-label="Toggle navigation menu"
       >
         {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

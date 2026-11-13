@@ -13,23 +13,23 @@ const menuItems: MenuItem[] = [
   {
     id: '1',
     name: 'Berry Pink',
-    description: 'Perpaduan segar sari buah beri manis dengan soda dingin dan sensasi citrus lemon yang menyegarkan.',
-    price: 22000,
+    description: 'Perpaduan segar sari buah beri manis dingin dan sensasi citrus lemon yang menyegarkan.',
+    price: 19000,
     category: 'non-coffee',
     image: '/img/Berry_pink.jpeg',
   },
   {
     id: '2',
-    name: 'Blue Ocean',
+    name: 'Blue Ocean Mojito',
     description: 'Kesegaran sirup blue curacao berpadu soda berkarbonasi, daun mint segar, dan perasan jeruk nipis dingin.',
-    price: 22000,
+    price: 18000,
     category: 'non-coffee',
     image: '/img/Blue_ocean.jpeg',
   },
   {
     id: '3',
     name: 'Grand Forest',
-    description: 'Sensasi segar sirup melon hijau berpadu irisan jeruk nipis asli, daun mint, dan es soda menyejukkan.',
+    description: 'Sensasi segar sirup melon hijau berpadu irisan jeruk nipis asli, daun mint, dan yakult menyejukkan.',
     price: 22000,
     category: 'non-coffee',
     image: '/img/Grand_forest.jpeg',
@@ -37,8 +37,8 @@ const menuItems: MenuItem[] = [
   {
     id: '4',
     name: 'Summer Mojito',
-    description: 'Mocktail musim panas dengan ekstrak stroberi manis, soda sparkling, daun mint, dan sentuhan lemon segar.',
-    price: 22000,
+    description: 'Mocktail musim panas dengan ekstrak water melon, soda sparkling, daun mint, dan sentuhan lemon segar.',
+    price: 18000,
     category: 'non-coffee',
     image: '/img/Summer_mojito.jpeg',
   },
@@ -52,7 +52,7 @@ const menuItems: MenuItem[] = [
   },
   {
     id: '6',
-    name: 'Kopi Susu Kekinian',
+    name: 'Coffee Gula Aren',
     description: 'Espresso pekat bertemu susu segar, menghasilkan kopi susu iced yang sempurna dan nikmat.',
     price: 20000,
     category: 'coffee',
@@ -60,42 +60,67 @@ const menuItems: MenuItem[] = [
   },
   {
     id: '7',
-    name: 'Iced Coffee Latte',
+    name: 'Coffee Latte',
     description: 'Kopi latte iced dengan milk foam tebal, tekstur lembut, dan aroma kopi yang kuat.',
-    price: 22000,
+    price: 19000,
     category: 'coffee',
     image: '/img/foto-8.jpeg',
   },
   {
     id: '8',
-    name: 'Vanilla Latte',
-    description: 'Espresso dan susu segar dipadu sirup vanilla premium — manis lembut dengan aroma harum yang menggoda.',
-    price: 23000,
+    name: 'Vanilla Coffee',
+    description: 'Espresso dan susu segar dipadu sirup vanilla premium, manis lembut dengan aroma harum yang menggoda.',
+    price: 19000,
     category: 'coffee',
     image: '/img/foto-9.jpeg',
   },
   {
     id: '9',
-    name: 'Hazelnut Latte',
+    name: 'Hazelnut Coffee',
     description: 'Kopi latte iced dengan sentuhan hazelnut yang kaya, menghadirkan rasa nutty yang memanjakan lidah.',
-    price: 23000,
+    price: 19000,
     category: 'coffee',
     image: '/img/foto-10.jpeg',
   },
   {
     id: '10',
     name: 'Taro Coffee',
-    description: 'Perpaduan unik espresso dengan taro ungu yang creamy — kopi yang berbeda dari biasanya.',
-    price: 25000,
+    description: 'Perpaduan unik espresso dengan taro ungu yang creamy menjadikan rasa kopi yang berbeda dari biasanya.',
+    price: 20000,
     category: 'coffee',
     image: '/img/foto-11.jpeg',
+  },
+  {
+    id: '11',
+    name: 'Milk Taro',
+    description: 'Masih Perlu pembahasan',
+    price: 19000,
+    category: 'milk-matcha',
+    image: '/img/foto-2.jpeg',
+  },
+  {
+    id: '12',
+    name: 'Milk Matcha',
+    description: 'Masih Perlu pembahasan',
+    price: 20000,
+    category: 'milk-matcha',
+    image: '/img/foto-1.jpeg',
+  },
+  {
+    id: '13',
+    name: 'Matcha Brown Sugar Latte',
+    description: 'Masih Perlu pembahasan',
+    price: 20000,
+    category: 'milk-matcha',
+    image: '/img/foto-4.jpeg',
   },
 ];
 
 const categories = [
   { key: 'all', label: 'Semua' },
-  { key: 'coffee', label: 'Kopi' },
-  { key: 'non-coffee', label: 'Non-Kopi' },
+  { key: 'coffee', label: 'Coffee' },
+  { key: 'non-coffee', label: 'Fresh Drink' },
+  { key: 'milk-matcha', label: 'Milk & Matcha'}
 ];
 
 const formatPrice = (price: number) =>
@@ -134,17 +159,23 @@ function CategoryTabs({ active, onSelect }: { active: string; onSelect: (key: st
   );
 }
 
+function ItemImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative aspect-[3/4] overflow-hidden bg-void-950">
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
 function MenuItemCard({ item }: { item: MenuItem }) {
   return (
     <article className="group bg-void-900 border border-void-800/80 hover:border-gold-500/40 transition-all rounded-lg overflow-hidden flex flex-col shadow-md">
-      <div className="relative h-64 sm:h-56 overflow-hidden bg-void-950">
-        <img
-          src={item.image}
-          alt={item.name}
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-          loading="lazy"
-        />
-      </div>
+      <ItemImage src={item.image} alt={item.name} />
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
           <div className="flex items-start justify-between gap-3">

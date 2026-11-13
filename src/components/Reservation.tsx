@@ -67,14 +67,14 @@ function UserFields({ form, onChange }: FormFieldsProps) {
         <label className="text-xs tracking-wider uppercase text-parchment-200 font-semibold mb-2 block">Nama Lengkap *</label>
         <div className="relative">
           <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-400/80" />
-          <input type="text" required value={form.name} onChange={(e) => onChange('name', e.target.value)} placeholder="Nama Anda" className="w-full pl-10 pr-4 py-2.5 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-sm focus:border-gold-500" />
+          <input type="text" required value={form.name} onChange={(e) => onChange('name', e.target.value)} placeholder="Nama Lengkap" className="w-full pl-10 pr-4 py-3 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-base sm:text-sm focus:border-gold-500" />
         </div>
       </div>
       <div>
         <label className="text-xs tracking-wider uppercase text-parchment-200 font-semibold mb-2 block">Email *</label>
         <div className="relative">
           <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-400/80" />
-          <input type="email" required value={form.email} onChange={(e) => onChange('email', e.target.value)} placeholder="email@contoh.com" className="w-full pl-10 pr-4 py-2.5 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-sm focus:border-gold-500" />
+          <input type="email" required value={form.email} onChange={(e) => onChange('email', e.target.value)} placeholder="email@contoh.com" className="w-full pl-10 pr-4 py-3 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-base sm:text-sm focus:border-gold-500" />
         </div>
       </div>
     </>
@@ -85,17 +85,17 @@ function ContactFields({ form, onChange }: FormFieldsProps) {
   return (
     <>
       <div>
-        <label className="text-xs tracking-wider uppercase text-parchment-200 font-semibold mb-2 block">Nomor Telepon / WA</label>
+        <label className="text-xs tracking-wider uppercase text-parchment-200 font-semibold mb-2 block">Nomor Whatsapp</label>
         <div className="relative">
           <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-400/80" />
-          <input type="tel" value={form.phone} onChange={(e) => onChange('phone', e.target.value)} placeholder="08xx-xxxx-xxxx" className="w-full pl-10 pr-4 py-2.5 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-sm focus:border-gold-500" />
+          <input type="tel" value={form.phone} onChange={(e) => onChange('phone', e.target.value)} placeholder="08xx-xxxx-xxxx" className="w-full pl-10 pr-4 py-3 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-base sm:text-sm focus:border-gold-500" />
         </div>
       </div>
       <div>
         <label className="text-xs tracking-wider uppercase text-parchment-200 font-semibold mb-2 block">Jumlah Tamu</label>
         <div className="relative">
           <Users className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-400/80" />
-          <select value={form.party_size} onChange={(e) => onChange('party_size', parseInt(e.target.value))} className="w-full pl-10 pr-4 py-2.5 bg-void-900 border border-void-700 rounded text-parchment-100 text-sm focus:border-gold-500">
+          <select value={form.party_size} onChange={(e) => onChange('party_size', parseInt(e.target.value))} className="w-full pl-10 pr-4 py-3 bg-void-900 border border-void-700 rounded text-parchment-100 text-base sm:text-sm focus:border-gold-500">
             {[1, 2, 3, 4, 5, 6, 7, 8, 10, 12].map((n) => <option key={n} value={n} className="bg-void-950 text-parchment-100">{n} Orang</option>)}
           </select>
         </div>
@@ -111,14 +111,14 @@ function ScheduleInputs({ form, onChange }: FormFieldsProps) {
         <label className="text-xs tracking-wider uppercase text-parchment-200 font-semibold mb-2 block">Tanggal Kunjungan *</label>
         <div className="relative">
           <Calendar className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-400/80" />
-          <input type="date" required value={form.date} onChange={(e) => onChange('date', e.target.value)} className="w-full pl-10 pr-4 py-2.5 bg-void-900 border border-void-700 rounded text-parchment-100 text-sm focus:border-gold-500" />
+          <input type="date" required value={form.date} onChange={(e) => onChange('date', e.target.value)} className="w-full pl-10 pr-4 py-3 bg-void-900 border border-void-700 rounded text-parchment-100 text-base sm:text-sm focus:border-gold-500" />
         </div>
       </div>
       <div>
-        <label className="text-xs tracking-wider uppercase text-parchment-200 font-semibold mb-2 block">Waktu / Jam</label>
+        <label className="text-xs tracking-wider uppercase text-parchment-200 font-semibold mb-2 block">Jam</label>
         <div className="relative">
           <Clock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-400/80" />
-          <select value={form.time} onChange={(e) => onChange('time', e.target.value)} className="w-full pl-10 pr-4 py-2.5 bg-void-900 border border-void-700 rounded text-parchment-100 text-sm focus:border-gold-500">
+          <select value={form.time} onChange={(e) => onChange('time', e.target.value)} className="w-full pl-10 pr-4 py-3 bg-void-900 border border-void-700 rounded text-parchment-100 text-base sm:text-sm focus:border-gold-500">
             {['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'].map((t) => (
               <option key={t} value={t} className="bg-void-950 text-parchment-100">{t} WIB</option>
             ))}
@@ -133,7 +133,7 @@ function ReservationNotes({ notes, onChange }: { notes: string; onChange: (val: 
   return (
     <div>
       <label className="text-xs tracking-wider uppercase text-parchment-200 font-semibold mb-2 block">Catatan Khusus (Opsional)</label>
-      <textarea rows={3} value={notes} onChange={(e) => onChange(e.target.value)} placeholder="Contoh: Meja billiard, area santai, request khusus..." className="w-full px-4 py-2.5 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-sm focus:border-gold-500 resize-none" />
+      <textarea rows={3} value={notes} onChange={(e) => onChange(e.target.value)} placeholder="Contoh: Meja billiard, area santai, request khusus..." className="w-full px-4 py-3 bg-void-900 border border-void-700 rounded text-parchment-100 placeholder:text-parchment-400/50 text-base sm:text-sm focus:border-gold-500 resize-none" />
     </div>
   );
 }
@@ -142,7 +142,7 @@ function ReservationForm({ form, status, errorMsg, onChange, onSubmit }: {
   form: FormState;
   status: string;
   errorMsg: string;
-  onChange: (key: keyof FormState, val: string | number) => void;
+  onChange: (key: keyof FormState, val: string | number ) => void;
   onSubmit: (e: React.FormEvent) => void;
 }) {
   return (
